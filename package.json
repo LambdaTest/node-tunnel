@@ -1,0 +1,36 @@
+{
+  "name": "lambdatest-tunnel",
+  "version": "1.1.2",
+  "description": "Nodejs bindings for Kanhaiya Tunnel",
+  "main": "index.js",
+  "repository": "LambdaTest/lambdatest-tunnel",
+  "author": "LambdaTest",
+  "contributors": [
+    "Kanhaiya Lal Singh <kanhaiyas@lambdatest.com> (https://github.com/kanhaiya15)",
+    "Nikhil Yadav <nikhily@lambdatest.com> (https://github.com/nikhil-lambda)"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "LambdaTest",
+    "Tunnel",
+    "Local",
+    "selenium",
+    "testing"
+  ],
+  "bugs": {
+    "url": "https://github.com/LambdaTest/lambdatest-tunnel/issues"
+  },
+  "homepage": "https://github.com/LambdaTest/lambdatest-tunnel#readme",
+  "dependencies": {
+    "elasticsearch": "^15.4.1",
+    "get-port": "^1.0.0",
+    "request": "^2.88.0",
+    "split": "^1.0.1",
+    "unzip": "^0.1.11",
+    "winston": "^3.2.1",
+    "winston-elasticsearch": "^0.7.9"
+  },
+  "devDependencies": {
+    "clang-format": "^1.2.4"
+  }
+}
