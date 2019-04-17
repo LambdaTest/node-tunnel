@@ -3,13 +3,13 @@ Nodejs bindings for Tunnel.
 ## Installation
 
 ```
-npm install @kanhaiyalalsingh/tunnel
+npm install lambdatest-tunnel
 ```
 
 ## Example
 
 ```js
-var lambdaTunnel = require('@kanhaiyalalsingh/tunnel');
+var lambdaTunnel = require('lambdatest-tunnel');
 
 //creates an instance of Tunnel
 var tunnelInstance = new lambdaTunnel();
