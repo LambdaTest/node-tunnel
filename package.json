@@ -1,13 +1,17 @@
 {
-  "name": "lambdatest-tunnel",
-  "version": "1.1.2",
-  "description": "Nodejs bindings for Kanhaiya Tunnel",
+  "name": "node-tunnel-v1",
+  "version": "1.0.0",
+  "description": "Nodejs bindings for LambdaTest Tunnel",
   "main": "index.js",
-  "repository": "LambdaTest/lambdatest-tunnel",
-  "author": "LambdaTest",
+  "repository": "LambdaTest/node-tunnel",
+  "author": {
+    "name": "LambdaTest",
+    "email": "keys@lambdatest.com"
+  },
   "contributors": [
-    "Kanhaiya Lal Singh <kanhaiyas@lambdatest.com> (https://github.com/kanhaiya15)",
-    "Nikhil Yadav <nikhily@lambdatest.com> (https://github.com/nikhil-lambda)"
+    "Kanhaiya Lal Singh <kanhaiya1501@gmail.com> (https://www.npmjs.com/~kanhaiyalalsingh)",
+    "Nikhil Yadav <nikhily@lambdatest.com> (https://www.npmjs.com/~nikhily)",
+    "Sirajuddin Khan <sirajk@lambdatest.com> (https://www.npmjs.com/~sirajk)"
   ],
   "license": "ISC",
   "keywords": [
@@ -18,9 +22,9 @@
     "testing"
   ],
   "bugs": {
-    "url": "https://github.com/LambdaTest/lambdatest-tunnel/issues"
+    "url": "https://github.com/LambdaTest/node-tunnel/issues"
   },
-  "homepage": "https://github.com/LambdaTest/lambdatest-tunnel#readme",
+  "homepage": "https://github.com/LambdaTest/node-tunnel#readme",
   "dependencies": {
     "elasticsearch": "^15.4.1",
     "get-port": "^1.0.0",
