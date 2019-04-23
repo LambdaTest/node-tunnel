@@ -1,3 +1,5 @@
+![LambdaTest Logo](https://www.lambdatest.com/static/images/logo.svg)
+
 Nodejs bindings for Tunnel.
 
 ## Installation
@@ -44,11 +46,24 @@ Below credentials will be used to perform basic authentication of your LambdaTes
 - user (Username of your LambdaTest account)
 - key (Access Key of your LambdaTest account)
 
+### Port
+
+If you wish to connect tunnel on a specific port.
+
+- port : (optional) Local port to connect tunnel.
+
+```js
+tunnelArguments = {
+  user: process.env.LT_USERNAME || "<lambdatest-user>",
+  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
+  port: "<port>"
+};
+```
+
 #### Proxy
 
 If you wish to perform tunnel testing using a proxy.
 
-- port : (optional) Local port to connect tunnel.
 - proxyhost: Hostname/IP of proxy, this is a mandatory value.
 - proxyport: Port for the proxy, by default it would consider 3128 if proxyhost is used For Basic Authentication, we use the below proxy options:
 - proxyuser: Username for connecting to proxy, mandatory value for using 'proxypass'
@@ -71,6 +86,13 @@ Human readable tunnel identifier
 
 - tunnelName: (Name of the tunnel)
 
+````js
+tunnelArguments = {
+  user: process.env.LT_USERNAME || "<lambdatest-user>",
+  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
+  tunnelName: "<your-tunnel-name>"
+};
+
 #### Testing Local Folder
 
 Populate the path of the local folder you want to test in your internal server as a value in the below modifier.
@@ -83,7 +105,7 @@ tunnelArguments = {
   key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
   dir: "<path of the local folder you want to test>"
 };
-```
+````
 
 #### Testing With Tunnel On Different Environments
 
@@ -218,7 +240,7 @@ tunnelArguments = {
 #### Additional Arguments
 
 Logfile
-While executing the '-verbose' or '-v' argument, you can save the entire logs in a file. You can provide a specific path to this file. If you won't provide a path then the logs would be saved in your present working directory by the filename: tunnel.log. For providing a specific path use the below argument:
+You can provide a specific path to this file. If you won't provide a path then the logs would be saved in your present working directory by the filename: tunnel.log. For providing a specific path use the below argument:
 
 - logFile : path
 
