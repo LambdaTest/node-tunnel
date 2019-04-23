@@ -1,13 +1,13 @@
 {
-  "name": "node-tunnel-v1",
-  "version": "1.0.0",
+  "name": "@lambdatest/node-tunnel-v1",
+  "version": "1.0.2",
   "description": "Nodejs bindings for LambdaTest Tunnel",
   "main": "index.js",
-  "repository": "LambdaTest/node-tunnel",
-  "author": {
-    "name": "LambdaTest",
-    "email": "keys@lambdatest.com"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LambdaTest/node-tunnel.git"
   },
+  "author": "LambdaTest <keys@lambdatest.com>",
   "contributors": [
     "Kanhaiya Lal Singh <kanhaiya1501@gmail.com> (https://www.npmjs.com/~kanhaiyalalsingh)",
     "Nikhil Yadav <nikhily@lambdatest.com> (https://www.npmjs.com/~nikhily)",
@@ -36,5 +36,11 @@
   },
   "devDependencies": {
     "clang-format": "^1.2.4"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
