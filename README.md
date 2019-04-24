@@ -107,20 +107,6 @@ tunnelArguments = {
 };
 ````
 
-#### Testing With Tunnel On Different Environments
-
-Use this modifier to specify whether you wish to perform test on LambdaTest production environment or stage environment.
-
-- env/environment: stage or production
-
-```js
-tunnelArguments = {
-  user: process.env.LT_USERNAME || "<lambdatest-user>",
-  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
-  env: "<stage/production>"
-};
-```
-
 #### Enable Verbose Logging
 
 To log every request to stdout.
@@ -132,108 +118,6 @@ tunnelArguments = {
   user: process.env.LT_USERNAME || "<lambdatest-user>",
   key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
   v: true
-};
-```
-
-#### Connect Configuration File With Lambda Tunnel
-
-Below modifier is used to connect a config file with an SSH Tunnel provided by LambdaTest.
-
-- configfile/conffile/configurationfile : Local path to a YAML file
-
-```js
-tunnelArguments = {
-  user: process.env.LT_USERNAME || "<lambdatest-user>",
-  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
-  configfile: "<Local path to a YAML file>"
-};
-```
-
-#### Share Tunnel With Teammates
-
-Below modifier is used for sharing an SSH tunnel connection between your colleagues.
-
-- shared-tunnel/sharedtunnel: true or false
-
-```js
-tunnelArguments = {
-  user: process.env.LT_USERNAME || "<lambdatest-user>",
-  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
-  sharedtunnel: true
-};
-```
-
-Note: If an admin shares a tunnel then it would be visible to every team member.
-
-#### Specify Domains To Route Through Tunnel
-
-Below modifier is used to route the Lambda Tunnel through a specific domain.
-Note: Separate your values with comma, and do not use and spaces. For example, mydomain.com,lambdatest.com,mysite.com, instead of mydomain.com, lambdatest.com, mysite.com
-Another key thing to note would be to use only the domain name without preceeding it with http: or https: or anything else.
-
-- local-domains/localdomains : domain1.com , domain2.com , domain3.com
-
-```js
-tunnelArguments = {
-  user: process.env.LT_USERNAME || "<lambdatest-user>",
-  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
-  localdomains: "<domain1.com, domain2.com, domain3.com>"
-};
-```
-
-#### Print JSON Configuration
-
-Below modifier is used for printing JSON configurations to stdout. The value of this flag is to be understood by LambdaTest Jenkins plugin and is irrelavant to an end-user.
-
-- output-config/outputconfiguration/outputconf/outputconfig : true or false
-
-```js
-tunnelArguments = {
-  user: process.env.LT_USERNAME || "<lambdatest-user>",
-  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
-  outputconf: true
-};
-```
-
-#### Specify DNS(Domain Name System)
-
-Below modifier is used for specifying a DNS. To specify multiple DNS use comma separated format without spaces along with IP addresses. You may specify a port number with an IP address if you like.
-
-- dns : <server[,server..]>
-
-```js
-tunnelArguments = {
-  user: process.env.LT_USERNAME || "<lambdatest-user>",
-  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
-  dns: "<server[,server..]>"
-};
-```
-
-#### Process ID For A Tunnel Process
-
-Specify a file wherein you would wish to write the process ID of Lambda Tunnel. This would be help you to stop Lambda Tunnel programatically. When you terminate your SSH connection through Lambda Tunnel then there may be times where the pidfile may not be removed along with the termination of the SSH connection.
-
-- pidfile : <file>
-
-```js
-tunnelArguments = {
-  user: process.env.LT_USERNAME || "<lambdatest-user>",
-  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
-  pidfile: "<file>"
-};
-```
-
-#### Proxy Autoconfiguration File
-
-Can be a http(s) or localfile:// URL. https://findproxyforurl.com/example-pac-file/ Absolute paths are required when specifying a local PAC file (EG. file:///Users/Andrew/Desktop/MyPac.pac).
-
-- pac : <URL>
-
-```js
-tunnelArguments = {
-  user: process.env.LT_USERNAME || "<lambdatest-user>",
-  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
-  pac: "<URL>"
 };
 ```
 
