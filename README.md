@@ -35,6 +35,56 @@ tunnelInstance.start(tunnelArguments, function(error, status) {
 });
 ```
 
+## Methods
+
+#### tunnelInstance.stop(callback)
+
+Stop the Running tunnel Instance.
+
+- `callback` (`function(error, status)`): A callback to invoke when the API call is
+complete.
+
+```js
+tunnelInstance.start(tunnelArguments, function(error, status) {
+  if (!error) {
+    // Do whatever you want..
+    tunnelInstance.stop(function(error, status) {
+      console.log("Tunnel is Stpooed ? " + status);
+    });
+  }
+});
+```
+
+#### tunnelInstance.getTunnelName(callback)
+
+Get name of the Running tunnel Instance.
+
+- `callback` (`function(tunnelName)`): A callback to invoke when the API call is
+complete.
+
+```js
+tunnelInstance.start(tunnelArguments, function(error, status) {
+  if (!error) {
+    tunnelInstance.getTunnelName(function(tunnelName) {
+      console.log("Tunnel Name : " + tunnelName);
+    });
+  }
+});
+```
+
+#### tunnelInstance.isRunning()
+
+Get Running Status of tunnel Instance.
+
+```js
+tunnelInstance.start(tunnelArguments, function(error, status) {
+  if (!error) {
+    var tunnelRunningStatus = tunnelInstance.isRunning();
+    console.log("Tunnel is Running ? " + tunnelRunningStatus);
+  }
+});
+```
+
 ## Arguments
 
 Every modifier except user and key is optional. Visit LambdaTest tunnel modifiers for an entire list of modifiers. Below are demonstration of some modifiers for your reference.
