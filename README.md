@@ -42,7 +42,7 @@ tunnelInstance.start(tunnelArguments, function(error, status) {
 Stop the Running tunnel Instance.
 
 - `callback` (`function(error, status)`): A callback to invoke when the API call is
-complete.
+  complete.
 
 ```js
 tunnelInstance.start(tunnelArguments, function(error, status) {
@@ -60,7 +60,7 @@ tunnelInstance.start(tunnelArguments, function(error, status) {
 Get name of the Running tunnel Instance.
 
 - `callback` (`function(tunnelName)`): A callback to invoke when the API call is
-complete.
+  complete.
 
 ```js
 tunnelInstance.start(tunnelArguments, function(error, status) {
