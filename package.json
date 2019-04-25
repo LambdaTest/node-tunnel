@@ -35,12 +35,14 @@
     "winston-elasticsearch": "^0.7.9"
   },
   "devDependencies": {
-    "clang-format": "^1.2.4"
+    "chai": "^4.2.0",
+    "clang-format": "^1.2.4",
+    "mocha": "^6.1.4"
   },
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests --recursive"
   }
 }
