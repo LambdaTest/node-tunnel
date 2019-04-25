@@ -1,0 +1,64 @@
+{
+  "elk": {
+    "ELK_HOST": "https://search-kinesis-ingestion-stage-temp-wlmuadurdfgvyhvjjvhlfzr36u.us-east-1.es.amazonaws.com",
+    "ELK_INDEX": "npm-tunnel",
+    "ELK_TYPE": "logs",
+    "level": "info",
+    "indexSuffixPattern": "DD-MM-YYYY"
+  },
+  "tunnelBinary": {
+    "mac": {
+      "32bit": {
+        "httpPath": "https://downloads.lambdatest.com/tunnel/mac/32bit/LT_Mac.zip",
+        "binaryName": "LT_Mac.zip",
+        "hash": "1bf23df1f318591289e02ce7b024f820"
+      },
+      "64bit": {
+        "httpPath": "https://downloads.lambdatest.com/tunnel/mac/64bit/LT_Mac.zip",
+        "binaryName": "LT_Mac.zip",
+        "hash": "1bf23df1f318591289e02ce7b024f820"
+      }
+    },
+    "win": {
+      "32bit": {
+        "httpPath": "https://downloads.lambdatest.com/tunnel/windows/32bit/LT_Windows.zip",
+        "binaryName": "LT_Linux.zip",
+        "hash": "6e7b40f9189e985f140161e986ceee80"
+      },
+      "64bit": {
+        "httpPath": "https://downloads.lambdatest.com/tunnel/windows/64bit/LT_Windows.zip",
+        "binaryName": "LT_Windows.zip",
+        "hash": "6e7b40f9189e985f140161e986ceee80"
+      }
+    },
+    "linux": {
+      "32bit": {
+        "httpPath": "https://downloads.lambdatest.com/tunnel/linux/32bit/LT_Linux.zip",
+        "binaryName": "LT_Linux.zip",
+        "hash": "ba49afde2c74a80c2e02b55e6cdfc982"
+      },
+      "64bit": {
+        "httpPath": "https://downloads.lambdatest.com/tunnel/linux/64bit/LT_Linux.zip",
+        "binaryName": "LT_Linux.zip",
+        "hash": "ba49afde2c74a80c2e02b55e6cdfc982"
+      }
+    }
+  },
+  "AuthUrl": "https://accounts.lambdatest.com/api/user/token/auth",
+  "logEnable": true,
+  "latest": "1.0.0",
+  "supportedVersions": [
+    "1.0.0",
+    "1.0.1",
+    "1.0.2",
+    "1.0.3",
+    "1.0.4",
+    "1.0.5",
+    "1.0.6",
+    "1.0.7",
+    "1.0.8",
+    "1.0.8",
+    "1.1.0",
+    "1.1.1"
+  ]
+}
