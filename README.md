@@ -2,6 +2,11 @@
 
 Nodejs bindings for Tunnel.
 
+
+
+[![CircleCI](https://circleci.com/gh/LambdaTest/node-tunnel.svg?style=svg)](https://circleci.com/gh/LambdaTest/node-tunnel)
+
+
 ## Installation
 
 ```
