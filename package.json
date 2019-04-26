@@ -1,6 +1,6 @@
 {
-  "name": "@kanhaiyalalsingh/node-tunnel",
-  "version": "1.0.1",
+  "name": "@lambdatest/node-tunnel",
+  "version": "1.0.0",
   "description": "Nodejs bindings for LambdaTest Tunnel",
   "main": "index.js",
   "repository": {
@@ -9,9 +9,7 @@
   },
   "author": "LambdaTest <keys@lambdatest.com>",
   "contributors": [
-    "Kanhaiya Lal Singh <kanhaiya1501@gmail.com> (https://www.npmjs.com/~kanhaiyalalsingh)",
-    "Nikhil Yadav <nikhily@lambdatest.com> (https://www.npmjs.com/~nikhily)",
-    "Sirajuddin Khan <sirajk@lambdatest.com> (https://www.npmjs.com/~sirajk)"
+    "LambdaTest <keys@lambdatest.com> (https://www.npmjs.com/~lambdatestdev)"
   ],
   "license": "ISC",
   "keywords": [

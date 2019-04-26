@@ -2,10 +2,7 @@
 
 Nodejs bindings for Tunnel.
 
-
-
 [![CircleCI](https://circleci.com/gh/LambdaTest/node-tunnel.svg?style=svg)](https://circleci.com/gh/LambdaTest/node-tunnel)
-
 
 ## Installation
 
@@ -42,20 +39,33 @@ tunnelInstance.start(tunnelArguments, function(error, status) {
 
 ## Methods
 
-#### tunnelInstance.stop(callback)
+#### tunnelInstance.start(tunnelArguments, callback)
 
-Stop the Running tunnel Instance.
+Start tunnel Instance.
 
+- `tunnelArguments`: credentials for secure tunnel connection.
+  - `user`: The username for the LambdaTest account.
+  - `key`: The accessKey for the LambdaTest account.
 - `callback` (`function(error, status)`): A callback to invoke when the API call is
   complete.
 
 ```js
 tunnelInstance.start(tunnelArguments, function(error, status) {
   if (!error) {
-    // Do whatever you want..
-    tunnelInstance.stop(function(error, status) {
-      console.log("Tunnel is Stpooed ? " + status);
-    });
+    console.log("Tunnel is Running Successfully ");
+  }
+});
+```
+
+#### tunnelInstance.isRunning()
+
+Get Running Status of tunnel Instance.
+
+```js
+tunnelInstance.start(tunnelArguments, function(error, status) {
+  if (!error) {
+    var tunnelRunningStatus = tunnelInstance.isRunning();
+    console.log("Tunnel is Running ? " + tunnelRunningStatus);
   }
 });
 ```
@@ -77,15 +87,20 @@ tunnelInstance.start(tunnelArguments, function(error, status) {
 });
 ```
 
-#### tunnelInstance.isRunning()
+#### tunnelInstance.stop(callback)
 
-Get Running Status of tunnel Instance.
+Stop the Running tunnel Instance.
+
+- `callback` (`function(error, status)`): A callback to invoke when the API call is
+  complete.
 
 ```js
 tunnelInstance.start(tunnelArguments, function(error, status) {
   if (!error) {
-    var tunnelRunningStatus = tunnelInstance.isRunning();
-    console.log("Tunnel is Running ? " + tunnelRunningStatus);
+    // Do whatever you want..
+    tunnelInstance.stop(function(error, status) {
+      console.log("Tunnel is Stpooed ? " + status);
+    });
   }
 });
 ```
