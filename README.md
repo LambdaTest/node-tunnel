@@ -13,28 +13,44 @@ npm i @lambdatest/node-tunnel
 ## Example
 
 ```js
-var lambdaTunnel = require("@lambdatest/node-tunnel");
+var lambdaTunnel = require('@lambdatest/node-tunnel');
 
 //creates an instance of Tunnel
 var tunnelInstance = new lambdaTunnel();
 
 // replace <lambdatest-user> with your user and <lambdatest-accesskey> with your key.
 var tunnelArguments = {
-  user: process.env.LT_USERNAME || "<lambdatest-user>",
-  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>"
+  user: process.env.LT_USERNAME || '<lambdatest-user>',
+  key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>'
 };
 
+// Callback Style
 // starts the Tunnl instance with the required arguments
 tunnelInstance.start(tunnelArguments, function(error, status) {
   if (!error) {
-    console.log("Started Tunnel " + status);
-    // check if Tunnel instance is running
-    console.log(tunnelInstance.isRunning());
-    tunnelInstance.getTunnelName(function(tunnelName) {
-      console.log("Tunnel Name : " + tunnelName);
-    });
+    console.log('Tunnel is Running Successfully');
   }
 });
+
+// Promise Style
+tunnelInstance
+  .start(tunnelArguments)
+  .then(status => {
+    console.log('Tunnel is Running Successfully');
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+// async/await Style
+(async function() {
+  try {
+    const istunnelStarted = await tunnelInstance.start(tunnelArguments);
+    console.log('Tunnel is Running Successfully');
+  } catch (error) {
+    console.log(error);
+  }
+})();
 ```
 
 ## Methods
@@ -50,11 +66,32 @@ Start tunnel Instance.
   complete.
 
 ```js
+// Callback Style
 tunnelInstance.start(tunnelArguments, function(error, status) {
   if (!error) {
-    console.log("Tunnel is Running Successfully ");
+    console.log('Tunnel is Running Successfully');
   }
 });
+
+// Promise Style
+tunnelInstance
+  .start(tunnelArguments)
+  .then(status => {
+    console.log('Tunnel is Running Successfully');
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+// async/await Style
+(async function() {
+  try {
+    const istunnelStarted = await tunnelInstance.start(tunnelArguments);
+    console.log('Tunnel is Running Successfully');
+  } catch (error) {
+    console.log(error);
+  }
+})();
 ```
 
 #### tunnelInstance.isRunning()
@@ -62,12 +99,38 @@ tunnelInstance.start(tunnelArguments, function(error, status) {
 Get Running Status of tunnel Instance.
 
 ```js
+// Callback Style
 tunnelInstance.start(tunnelArguments, function(error, status) {
   if (!error) {
+    console.log('Tunnel is Running Successfully');
     var tunnelRunningStatus = tunnelInstance.isRunning();
-    console.log("Tunnel is Running ? " + tunnelRunningStatus);
+    console.log('Tunnel is Running ? ' + tunnelRunningStatus);
   }
 });
+
+// Promise Style
+tunnelInstance
+  .start(tunnelArguments)
+  .then(status => {
+    console.log('Tunnel is Running Successfully');
+    const tunnelRunningStatus = tunnelInstance.isRunning();
+    console.log('Tunnel is Running ? ' + tunnelRunningStatus);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+// async/await Style
+(async function() {
+  try {
+    const istunnelStarted = await tunnelInstance.start(tunnelArguments);
+    console.log('Tunnel is Running Successfully');
+    const tunnelRunningStatus = tunnelInstance.isRunning();
+    console.log('Tunnel is Running ? ' + tunnelRunningStatus);
+  } catch (error) {
+    console.log(error);
+  }
+})();
 ```
 
 #### tunnelInstance.getTunnelName(callback)
@@ -78,13 +141,40 @@ Get name of the Running tunnel Instance.
   complete.
 
 ```js
+// Callback Style
 tunnelInstance.start(tunnelArguments, function(error, status) {
   if (!error) {
+    console.log('Tunnel is Running Successfully');
     tunnelInstance.getTunnelName(function(tunnelName) {
-      console.log("Tunnel Name : " + tunnelName);
+      console.log('Tunnel Name : ' + tunnelName);
     });
   }
 });
+
+// Promise Style
+tunnelInstance
+  .start(tunnelArguments)
+  .then(status => {
+    console.log('Tunnel is Running Successfully');
+    tunnelInstance.getTunnelName().then(tunnelName => {
+      console.log('Tunnel Name : ' + tunnelName);
+    });
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+// async/await Style
+(async function() {
+  try {
+    const istunnelStarted = await tunnelInstance.start(tunnelArguments);
+    console.log('Tunnel is Running Successfully');
+    const tunnelName = await tunnelInstance.getTunnelName();
+    console.log('Tunnel Name : ' + tunnelName);
+  } catch (error) {
+    console.log(error);
+  }
+})();
 ```
 
 #### tunnelInstance.stop(callback)
@@ -95,19 +185,45 @@ Stop the Running tunnel Instance.
   complete.
 
 ```js
+// Callback Style
 tunnelInstance.start(tunnelArguments, function(error, status) {
   if (!error) {
-    // Do whatever you want..
+    console.log('Tunnel is Running Successfully');
     tunnelInstance.stop(function(error, status) {
-      console.log("Tunnel is Stpooed ? " + status);
+      console.log('Tunnel is Stpooed ? ' + status);
     });
   }
 });
+
+// Promise Style
+tunnelInstance
+  .start(tunnelArguments)
+  .then(status => {
+    console.log('Tunnel is Running Successfully');
+    tunnelInstance.stop().then(status => {
+      console.log('Tunnel is Stpooed ? ' + status);
+    });
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+// async/await Style
+(async function() {
+  try {
+    const istunnelStarted = await tunnelInstance.start(tunnelArguments);
+    console.log('Tunnel is Running Successfully');
+    const status = await tunnelInstance.stop();
+    console.log('Tunnel is Stpooed ? ' + status);
+  } catch (error) {
+    console.log(error);
+  }
+})();
 ```
 
 ## Arguments
 
-Every modifier except user and key is optional. Visit LambdaTest tunnel modifiers for an entire list of modifiers. Below are demonstration of some modifiers for your reference.
+Every modifier except user and key is optional. Visit LambdaTest <a href="https://www.lambdatest.com/support/docs/testing-locally-hosted-pages" target="_blank">tunnel modifiers</a> for an entire list of modifiers. Below are demonstration of some modifiers for your reference.
 
 #### LambdaTest Basic Credentials
 
@@ -124,9 +240,9 @@ If you wish to connect tunnel on a specific port.
 
 ```js
 tunnelArguments = {
-  user: process.env.LT_USERNAME || "<lambdatest-user>",
-  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
-  port: "<port>"
+  user: process.env.LT_USERNAME || '<lambdatest-user>',
+  key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>',
+  port: '<port>'
 };
 ```
 
@@ -141,12 +257,12 @@ If you wish to perform tunnel testing using a proxy.
 
 ```js
 tunnelArguments = {
-  user: process.env.LT_USERNAME || "<lambdatest-user>",
-  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
-  proxyHost: "127.0.0.1",
-  proxyPort: "8000",
-  proxyUser: "user",
-  proxyPass: "password"
+  user: process.env.LT_USERNAME || '<lambdatest-user>',
+  key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>',
+  proxyHost: '127.0.0.1',
+  proxyPort: '8000',
+  proxyUser: 'user',
+  proxyPass: 'password'
 };
 ```
 
@@ -185,8 +301,8 @@ To log every request to stdout.
 
 ```js
 tunnelArguments = {
-  user: process.env.LT_USERNAME || "<lambdatest-user>",
-  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
+  user: process.env.LT_USERNAME || '<lambdatest-user>',
+  key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>',
   v: true
 };
 ```
@@ -200,9 +316,9 @@ You can provide a specific path to this file. If you won't provide a path then t
 
 ```js
 tunnelArguments = {
-  user: process.env.LT_USERNAME || "<lambdatest-user>",
-  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
-  logFile: "/lambdatest/logs.txt"
+  user: process.env.LT_USERNAME || '<lambdatest-user>',
+  key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>',
+  logFile: '/lambdatest/logs.txt'
 };
 ```
 
@@ -216,7 +332,7 @@ Tips for submitting an issue:
 Keep in mind, you don't end up submitting two issues with the same information. Make sure you add a unique input in every issue that you submit. You could also provide a "+1" value in the comments.
 
 Always provide the steps to reproduce before you submit a bug.
-Provide the environment details where you recieved the issue i.e. Browser Name, Browser Version, Operating System, Screen Resolution and more.
+Provide the environment details where you received the issue i.e. Browser Name, Browser Version, Operating System, Screen Resolution and more.
 Describe the situation that led to your encounter with bug.
 Describe the expected output, and the actual output precisely.
 
