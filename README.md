@@ -25,7 +25,7 @@ var tunnelArguments = {
 };
 
 // Callback Style
-// starts the Tunnl instance with the required arguments
+// Atarts the Tunnel instance with the required arguments
 tunnelInstance.start(tunnelArguments, function(error, status) {
   if (!error) {
     console.log('Tunnel is Running Successfully');
@@ -42,7 +42,7 @@ tunnelInstance
     console.log(error);
   });
 
-// async/await Style
+// Async/Await Style
 (async function() {
   try {
     const istunnelStarted = await tunnelInstance.start(tunnelArguments);
@@ -83,7 +83,7 @@ tunnelInstance
     console.log(error);
   });
 
-// async/await Style
+// Async/Await Style
 (async function() {
   try {
     const istunnelStarted = await tunnelInstance.start(tunnelArguments);
@@ -96,7 +96,7 @@ tunnelInstance
 
 #### tunnelInstance.isRunning()
 
-Get Running Status of tunnel Instance.
+Get Status of tunnel Instance.
 
 ```js
 // Callback Style
@@ -120,7 +120,7 @@ tunnelInstance
     console.log(error);
   });
 
-// async/await Style
+// Async/Await Style
 (async function() {
   try {
     const istunnelStarted = await tunnelInstance.start(tunnelArguments);
@@ -164,7 +164,7 @@ tunnelInstance
     console.log(error);
   });
 
-// async/await Style
+// Async/Await Style
 (async function() {
   try {
     const istunnelStarted = await tunnelInstance.start(tunnelArguments);
@@ -208,7 +208,7 @@ tunnelInstance
     console.log(error);
   });
 
-// async/await Style
+// Async/Await Style
 (async function() {
   try {
     const istunnelStarted = await tunnelInstance.start(tunnelArguments);
