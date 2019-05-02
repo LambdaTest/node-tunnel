@@ -1,5 +1,5 @@
 {
-  "name": "@lambdatest/node-tunnel",
+  "name": "lambdatest-node-tunnel",
   "version": "1.0.0",
   "description": "Nodejs bindings for LambdaTest Tunnel",
   "main": "index.js",

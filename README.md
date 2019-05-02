@@ -7,13 +7,13 @@ Nodejs bindings for Tunnel.
 ## Installation
 
 ```
-npm i @lambdatest/node-tunnel
+npm i lambdatest-node-tunnel
 ```
 
 ## Example
 
 ```js
-var lambdaTunnel = require('@lambdatest/node-tunnel');
+var lambdaTunnel = require('lambdatest-node-tunnel');
 
 //creates an instance of Tunnel
 var tunnelInstance = new lambdaTunnel();
