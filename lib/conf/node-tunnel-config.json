@@ -1,11 +1,4 @@
 {
-  "elk": {
-    "ELK_HOST": "https://search-kinesis-ingestion-stage-temp-wlmuadurdfgvyhvjjvhlfzr36u.us-east-1.es.amazonaws.com",
-    "ELK_INDEX": "npm-tunnel",
-    "ELK_TYPE": "logs",
-    "level": "info",
-    "indexSuffixPattern": "DD-MM-YYYY"
-  },
   "tunnelBinary": {
     "mac": {
       "32bit": {
@@ -59,6 +52,10 @@
     "1.0.8",
     "1.0.8",
     "1.1.0",
-    "1.1.1"
+    "1.1.1",
+    "2.0.0",
+    "3.0.0",
+    "4.0.0",
+    "5.0.0"
   ]
 }

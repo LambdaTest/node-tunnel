@@ -7,13 +7,13 @@ Nodejs bindings for Tunnel.
 ## Installation
 
 ```
-npm i lambdatest-node-tunnel
+npm i @lambdatest/node-tunnel
 ```
 
 ## Example
 
 ```js
-var lambdaTunnel = require('lambdatest-node-tunnel');
+var lambdaTunnel = require('@lambdatest/node-tunnel');
 
 //creates an instance of Tunnel
 var tunnelInstance = new lambdaTunnel();
@@ -223,7 +223,7 @@ tunnelInstance
 
 ## Arguments
 
-Every modifier except user and key is optional. Visit LambdaTest <a href="https://www.lambdatest.com/support/docs/testing-locally-hosted-pages" target="_blank">tunnel modifiers</a> for an entire list of modifiers. Below are demonstration of some modifiers for your reference.
+Every modifier except user and key is optional. Visit LambdaTest <a href="https://www.lambdatest.com/support/docs/lambda-tunnel-modifiers/" target="_blank">tunnel modifiers</a> for an entire list of modifiers. Below are demonstration of some modifiers for your reference.
 
 #### LambdaTest Basic Credentials
 
@@ -272,12 +272,13 @@ Human readable tunnel identifier
 
 - tunnelName: (Name of the tunnel)
 
-````js
+```js
 tunnelArguments = {
-  user: process.env.LT_USERNAME || "<lambdatest-user>",
-  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
-  tunnelName: "<your-tunnel-name>"
+  user: process.env.LT_USERNAME || '<lambdatest-user>',
+  key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>',
+  tunnelName: '<your-tunnel-name>'
 };
+```
 
 #### Testing Local Folder
 
@@ -287,11 +288,11 @@ Populate the path of the local folder you want to test in your internal server a
 
 ```js
 tunnelArguments = {
-  user: process.env.LT_USERNAME || "<lambdatest-user>",
-  key: process.env.LT_ACCESS_KEY || "<lambdatest-accesskey>",
-  dir: "<path of the local folder you want to test>"
+  user: process.env.LT_USERNAME || '<lambdatest-user>',
+  key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>',
+  dir: '<path of the local folder you want to test>'
 };
-````
+```
 
 #### Enable Verbose Logging
 
