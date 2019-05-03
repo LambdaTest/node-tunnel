@@ -15,10 +15,10 @@ npm i @lambdatest/node-tunnel
 ```js
 var lambdaTunnel = require('@lambdatest/node-tunnel');
 
-//creates an instance of Tunnel
+//Creates an instance of Tunnel
 var tunnelInstance = new lambdaTunnel();
 
-// replace <lambdatest-user> with your user and <lambdatest-accesskey> with your key.
+// Replace <lambdatest-user> with your user and <lambdatest-accesskey> with your key.
 var tunnelArguments = {
   user: process.env.LT_USERNAME || '<lambdatest-user>',
   key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>'
