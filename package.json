@@ -43,7 +43,8 @@
     "prettier": "^1.17.0"
   },
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "tests"
   },
   "scripts": {
     "test": "mocha tests --recursive"
