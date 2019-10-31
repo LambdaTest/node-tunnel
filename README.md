@@ -190,7 +190,7 @@ tunnelInstance.start(tunnelArguments, function(error, status) {
   if (!error) {
     console.log('Tunnel is Running Successfully');
     tunnelInstance.stop(function(error, status) {
-      console.log('Tunnel is Stpooed ? ' + status);
+      console.log('Tunnel is Stopped ? ' + status);
     });
   }
 });
@@ -201,7 +201,7 @@ tunnelInstance
   .then(status => {
     console.log('Tunnel is Running Successfully');
     tunnelInstance.stop().then(status => {
-      console.log('Tunnel is Stpooed ? ' + status);
+      console.log('Tunnel is Stopped ? ' + status);
     });
   })
   .catch(error => {
@@ -214,7 +214,7 @@ tunnelInstance
     const istunnelStarted = await tunnelInstance.start(tunnelArguments);
     console.log('Tunnel is Running Successfully');
     const status = await tunnelInstance.stop();
-    console.log('Tunnel is Stpooed ? ' + status);
+    console.log('Tunnel is Stopped ? ' + status);
   } catch (error) {
     console.log(error);
   }
