@@ -1,6 +1,6 @@
 {
   "name": "@lambdatest/node-tunnel",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Nodejs bindings for LambdaTest Tunnel",
   "main": "index.js",
   "repository": {
@@ -25,7 +25,7 @@
   "homepage": "https://github.com/LambdaTest/node-tunnel#readme",
   "dependencies": {
     "get-port": "^1.0.0",
-    "request": "^2.88.0",
+    "https-proxy-agent": "^5.0.0",
     "split": "^1.0.1",
     "unzipper": "^0.10.5"
   },
