@@ -1,6 +1,6 @@
 ![LambdaTest Logo](https://www.lambdatest.com/static/images/logo.svg)
 
-Nodejs bindings for Tunnel.
+# LambdaTest Nodejs bindings for Tunnel.
 
 [![CircleCI](https://circleci.com/gh/LambdaTest/node-tunnel.svg?style=svg)](https://circleci.com/gh/LambdaTest/node-tunnel)
 
