@@ -2,7 +2,7 @@
 
 # LambdaTest Nodejs bindings for Tunnel
 
-[![CircleCI](https://circleci.com/gh/LambdaTest/node-tunnel.svg?style=svg)](https://circleci.com/gh/LambdaTest/node-tunnel)
+[![CircleCI](https://circleci.com/gh/LambdaTest/node-tunnel.svg?style=svg)](https://circleci.com/gh/LambdaTest/node-tunnel)[![npm version](https://img.shields.io/npm/v/@lambdatest/node-tunnel.svg?style=flat)](https://www.npmjs.com/package/@lambdatest/node-tunnel 'View this project on npm')
 
 ## Installation
 
