@@ -26,7 +26,7 @@ declare module "@lambdatest/node-tunnel" {
     class Tunnel {
       start(options: Partial<Options>, callback: (error?: Error) => void): void;
       isRunning(): boolean;
-      stop(callback: () => void): void;
+      stop(callback: (error?: Error, status: boolean) => void): Promise<void>;
     }
   }
   
