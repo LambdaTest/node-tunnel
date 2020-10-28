@@ -1,0 +1,142 @@
+{
+   "binaryLinks": {
+      "mac": {
+         "v2": {
+            "32bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/mac/32bit/ltcomponent.zip",
+               "binaryName": "ltcomponent.zip",
+               "hash": "f802ce3166bb25c1a7508d530d514b19"
+            },
+            "64bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/mac/64bit/ltcomponent.zip",
+               "binaryName": "ltcomponent.zip",
+               "hash": "50508831995353deb4983d11ff4b0861"
+            }
+         },
+         "v3": {
+            "32bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/v3/mac/32bit/LT_Mac.zip",
+               "binaryName": "LT_Mac.zip",
+               "hash": "5fdb3e99e8c20fa9de64c73a3d68bac3"
+            },
+            "64bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip",
+               "binaryName": "LT_Mac.zip",
+               "hash": "8bb2c01ca2eef94764523a7c40e72a39"
+            }
+         }
+      },
+      "win": {
+         "v2": {
+            "32bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/windows/32bit/ltcomponent.zip",
+               "binaryName": "ltcomponent.zip",
+               "hash": "a8eb108eb6fc60178ae28196242a17ff"
+            },
+            "64bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/windows/64bit/ltcomponent.zip",
+               "binaryName": "ltcomponent.zip",
+               "hash": "69f59ccd89aae6adeccf69a8a829bdea"
+            }
+         },
+         "v3": {
+            "32bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/v3/windows/32bit/LT_Windows.zip",
+               "binaryName": "LT_Windows.zip",
+               "hash": "251cedbb4aeaf4f65d0e772073327832"
+            },
+            "64bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip",
+               "binaryName": "LT_Windows.zip",
+               "hash": "815260a1d983e79f2a35a732ab178c28"
+            }
+         }
+      },
+      "linux": {
+         "v2": {
+            "32bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/linux/32bit/ltcomponent.zip",
+               "binaryName": "ltcomponent.zip",
+               "hash": "f3eae3b5b32918e6ab53b694965fbdd2"
+            },
+            "64bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/linux/64bit/ltcomponent.zip",
+               "binaryName": "ltcomponent.zip",
+               "hash": "107d7d5020d181923fe2f207c2ec76cb"
+            }
+         },
+         "v3": {
+            "32bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/v3/linux/32bit/LT_Linux.zip",
+               "binaryName": "LT_Linux.zip",
+               "hash": "dfed824375d2e4326034ba8720fb88fd"
+            },
+            "64bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip",
+               "binaryName": "LT_Linux.zip",
+               "hash": "7ce7a92c80e5968bbc81e610ad12ed04"
+            }
+         }
+      },
+      "freebsd": {
+         "v2": {
+            "32bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/freebsd/32bit/ltcomponent.zip",
+               "binaryName": "ltcomponent.zip",
+               "hash": "874da2557a6e7d4ee047830092b36f10"
+            },
+            "64bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/freebsd/64bit/ltcomponent.zip",
+               "binaryName": "ltcomponent.zip",
+               "hash": "cd6d2cdca428fa38c94922b9853afe06"
+            }
+         },
+         "v3": {
+            "32bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/v3/freebsd/32bit/LT_Freebsd.zip",
+               "binaryName": "LT_Freebsd.zip",
+               "hash": "03389252446fa9c10afd3784cc8c550e"
+            },
+            "64bit": {
+               "httpPath": "https://downloads.lambdatest.com/tunnel/v3/freebsd/64bit/LT_Freebsd.zip",
+               "binaryName": "LT_Freebsd.zip",
+               "hash": "36b42ef31100b8602596ad2eb8b9d0be"
+            }
+         }
+      }
+   },
+   "AuthUrl": "https://accounts.lambdatest.com/api/user/token/auth",
+   "logEnable": true,
+   "latest": "3.0.0",
+   "supportedVersions": [
+      "1.0.0",
+      "1.0.1",
+      "1.0.2",
+      "1.0.3",
+      "1.0.4",
+      "1.0.5",
+      "1.0.6",
+      "1.0.7",
+      "1.0.8",
+      "1.0.9",
+      "1.1.0",
+      "1.1.1",
+      "1.1.2",
+      "1.1.3",
+      "1.1.4",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "3.0.0-beta.1",
+      "3.0.0",
+      "3.0.1",
+      "3.0.2",
+      "3.0.3",
+      "3.0.4",
+      "3.0.5",
+      "3.0.6",
+      "3.0.7",
+      "3.0.8",
+      "3.0.9"
+   ]
+}
