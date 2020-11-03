@@ -1,6 +1,6 @@
 {
   "name": "@lambdatest/node-tunnel",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Nodejs bindings for LambdaTest Tunnel",
   "main": "index.js",
   "repository": {

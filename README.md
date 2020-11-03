@@ -322,6 +322,13 @@ tunnelArguments = {
   logFile: '/lambdatest/logs.txt'
 };
 ```
+- egressOnly:  Uses proxy settings only for outbound requests.
+- ingressOnly: Uses proxy settings only for inbound requests.
+- dns:         Comma separated list of dns servers
+- sshConnType: Specify type of ssh connection (over_22, over_443, over_ws)
+- mode:        Specifies in which mode tunnel should run [ssh,ws] 
+- nows:        Force tunnel to run in non websocket mode
+- mitm:        MITM mode, used for testing websites with private certificates
 
 ## Contribute
 
