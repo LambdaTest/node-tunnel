@@ -328,6 +328,7 @@ tunnelArguments = {
 - sshConnType: Specify type of ssh connection (over_22, over_443, over_ws)
 - mode:        Specifies in which mode tunnel should run [ssh,ws] 
 - nows:        Force tunnel to run in non websocket mode
+- mitm:        MITM mode, used for testing websites with private certificates
 
 ## Contribute
 
