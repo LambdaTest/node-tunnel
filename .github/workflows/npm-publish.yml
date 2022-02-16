@@ -4,9 +4,8 @@
 name: Publish Node Tunnel Package
 
 on:
-  pull_request:
-    branches:   [ master ] 
-    types: [closed]
+  push:
+    branches: [ master ]
 
 jobs:
   build:
