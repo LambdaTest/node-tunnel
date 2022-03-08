@@ -1,4 +1,4 @@
-name: Node Tunnel Health Check
+name: Node Tunnel health check
 on:
   schedule:
     - cron: "0 18 * * *"
