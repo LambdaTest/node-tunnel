@@ -6,7 +6,7 @@ describe('Tunnel runs successfully', function() {
   var isTunnelStarted = false;
   beforeEach(function(done) {
     //start tunnel
-    this.timeout(10000);
+    this.timeout(20000);
     var tunnelInstance = new lambdaTunnel();
     // replace <lambdatest-user> with your user and <lambdatest-accesskey> with your key.
     var tunnelArguments = {
@@ -17,6 +17,9 @@ describe('Tunnel runs successfully', function() {
       tunnelInstance.start(tunnelArguments, function(error, status) {
         if (!error) {
           isTunnelStarted = true;
+          tunnelInstance.stop().then(status => {
+            console.log('Tunnel is Stopped ? ' + status);
+          });
           done();
         }
       });
