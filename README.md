@@ -2,7 +2,7 @@
 
 # LambdaTest Nodejs bindings for Tunnel 
 
-[![Node Tunnel health check](https://github.com/LambdaTest/node-tunnel/actions/workflows/healthcheck.yml/badge.svg)](https://github.com/LambdaTest/node-tunnel/actions/workflows/healthcheck.yml)
+[![Node Tunnel health check](https://github.com/LambdaTest/node-tunnel/actions/workflows/healthcheck.yml/badge.svg?branch=master)](https://github.com/LambdaTest/node-tunnel/actions/workflows/healthcheck.yml)
 
 ## Installation
 
