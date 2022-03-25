@@ -1,8 +1,8 @@
 ![LambdaTest Logo](https://www.lambdatest.com/static/images/logo.svg)
 
-# LambdaTest Nodejs bindings for Tunnel
+# LambdaTest Nodejs bindings for Tunnel 
 
-[![CircleCI](https://circleci.com/gh/LambdaTest/node-tunnel.svg?style=svg)](https://circleci.com/gh/LambdaTest/node-tunnel) [![npm version](https://img.shields.io/npm/v/@lambdatest/node-tunnel.svg?style=flat)](https://www.npmjs.com/package/@lambdatest/node-tunnel 'View this project on npm')
+[![Node Tunnel health check](https://github.com/LambdaTest/node-tunnel/actions/workflows/healthcheck.yml/badge.svg?branch=master)](https://github.com/LambdaTest/node-tunnel/actions/workflows/healthcheck.yml)
 
 ## Installation
 

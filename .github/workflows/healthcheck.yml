@@ -1,0 +1,29 @@
+name: Node Tunnel health check
+on:
+  schedule:
+    - cron: "0 18 * * *"
+  push:
+    branches:
+      - master
+   
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   env:
+       LT_USERNAME: ${{ secrets.LT_USERNAME }} 
+       LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+   steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      
+      - name: npm dependencies
+        run: npm install
+     
+      - name: Install Mocha
+        run: npm install -g mocha  
+        
+      - name: Run test
+        run: npm run test
