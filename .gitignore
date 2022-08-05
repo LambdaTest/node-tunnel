@@ -2,5 +2,4 @@
 *.DS_Store
 *.log
 .vscode/
-package-lock.json
 /.lambdatest

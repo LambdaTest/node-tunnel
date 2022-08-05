@@ -5,3 +5,5 @@
 .git/
 /node_modules/
 /.lambdatest
+/.circleci
+/.github/workflow
