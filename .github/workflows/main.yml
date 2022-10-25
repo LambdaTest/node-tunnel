@@ -1,0 +1,29 @@
+name: Git Secrets Scan
+on: [pull_request]
+jobs:
+  TruffleHog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Running secret scanning on commit
+        uses: akashs3curity/trufflehog@v4
+        with:
+          path: ./
+          base: ${{ github.event.repository.default_branch }}
+          head: HEAD
+      - name: Report Status
+        if: always()
+        uses: ravsamhq/notify-slack-action@v1
+        with:
+          status: ${{ job.status }} # required
+          notify_when: 'failure'
+          notification_title: '{workflow} has {status_message}'
+          message_format: '{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}> *Pullrequest:* ${{ github.event.pull_request.html_url || github.event.head_commit.url }}'
+          footer: 'Pull Raised by ${{ github.event.pull_request.user.login }}'
+          mention_users: 'U01U3UPEY3A'
+          mention_users_when: 'failure,warnings'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}
