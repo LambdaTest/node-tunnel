@@ -312,8 +312,6 @@ tunnelArguments = {
 
 Comma separated list of host to bypass from tunnel.
 
-- v/verbose : true or false
-
 ```js
 tunnelArguments = {
   user: process.env.LT_USERNAME || '<lambdatest-user>',
