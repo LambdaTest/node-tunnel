@@ -308,6 +308,18 @@ tunnelArguments = {
 };
 ```
 
+#### Enable bypasshosts
+
+Comma separated list of host to bypass from tunnel.
+
+```js
+tunnelArguments = {
+  user: process.env.LT_USERNAME || '<lambdatest-user>',
+  key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>',
+  bypasshosts: '<host name>'
+};
+```
+
 #### Additional Arguments
 
 Logfile
