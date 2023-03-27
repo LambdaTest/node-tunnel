@@ -3,6 +3,11 @@
   "version": "3.0.12",
   "description": "Nodejs bindings for LambdaTest Tunnel",
   "main": "index.js",
+  "files": [
+    "lib",
+    "index.d.ts",
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LambdaTest/node-tunnel.git"
