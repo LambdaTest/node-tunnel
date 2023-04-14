@@ -1,1 +1,1 @@
-module.exports = require('./lib/tunnel');
+module.exports = require('./lib/tunnel')
