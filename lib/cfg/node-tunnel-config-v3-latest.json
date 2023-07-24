@@ -76,7 +76,7 @@
    },
    "AuthUrl": "https://accounts.lambdatest.com/api/user/token/auth",
    "logEnable": true,
-   "latest": "4.0.1",
+   "latest": "4.0.2",
    "supportedVersions":
    [
        "1.0.0",
@@ -114,6 +114,7 @@
        "3.0.13",
        "3.0.14",
        "4.0.0",
-       "4.0.1"
+       "4.0.1",
+       "4.0.2"
    ]
 }
