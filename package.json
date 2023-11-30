@@ -30,7 +30,7 @@
   "homepage": "https://github.com/LambdaTest/node-tunnel#readme",
   "dependencies": {
     "adm-zip": "^0.5.10",
-    "axios": "^0.26.0",
+    "axios": "^1.6.2",
     "get-port": "^1.0.0",
     "https-proxy-agent": "^5.0.0",
     "split": "^1.0.1"
