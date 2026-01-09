@@ -20,6 +20,7 @@ declare module "@lambdatest/node-tunnel" {
       pac: string;
       logFile: string;
       controller: string;
+      retryProxyErrorCount: string;
       [key: string]: string | boolean;
     }
   
