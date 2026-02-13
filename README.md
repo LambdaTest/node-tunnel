@@ -1,6 +1,6 @@
-![LambdaTest Logo](https://www.lambdatest.com/resources/images/logos/logo.svg)
+![TestMu AI Logo](https://raw.githubusercontent.com/LambdaTest/node-tunnel/master/logo.svg)
 
-# LambdaTest Nodejs bindings for Tunnel 
+# TestMu AI Nodejs bindings for Tunnel 
 
 [![Node Tunnel health check](https://github.com/LambdaTest/node-tunnel/actions/workflows/healthcheck.yml/badge.svg?branch=master)](https://github.com/LambdaTest/node-tunnel/actions/workflows/healthcheck.yml)
 
@@ -60,8 +60,8 @@ tunnelInstance
 Start tunnel Instance.
 
 - `tunnelArguments`: credentials for secure tunnel connection.
-  - `user`: The username for the LambdaTest account.
-  - `key`: The accessKey for the LambdaTest account.
+  - `user`: The username for the TestMu AI account.
+  - `key`: The accessKey for the TestMu AI account.
 - `callback` (`function(error, status)`): A callback to invoke when the API call is
   complete.
 
@@ -223,14 +223,14 @@ tunnelInstance
 
 ## Arguments
 
-Every modifier except user and key is optional. Visit LambdaTest <a href="https://www.lambdatest.com/support/docs/lambda-tunnel-modifiers/" target="_blank">tunnel modifiers</a> for an entire list of modifiers. Below are demonstration of some modifiers for your reference.
+Every modifier except user and key is optional. Visit TestMu AI <a href="https://www.testmuai.com/support/docs/lambda-tunnel-modifiers/" target="_blank">tunnel modifiers</a> for an entire list of modifiers. Below are demonstration of some modifiers for your reference.
 
-#### LambdaTest Basic Credentials
+#### TestMu AI Basic Credentials
 
-Below credentials will be used to perform basic authentication of your LambdaTest account.
+Below credentials will be used to perform basic authentication of your TestMu AI account.
 
-- user (Username of your LambdaTest account)
-- key (Access Key of your LambdaTest account)
+- user (Username of your TestMu AI account)
+- key (Access Key of your TestMu AI account)
 
 ### Port
 
@@ -346,11 +346,15 @@ Describe the expected output, and the actual output precisely.
 
 #### Pull Requests
 
-We don't want to pull breaks in case you want to customize your LambdaTest experience. Before you proceed with implementing pull requests, keep in mind the following.
+We don't want to pull breaks in case you want to customize your TestMu AI experience. Before you proceed with implementing pull requests, keep in mind the following.
 Make sure you stick to coding conventions.
 Once you include tests, ensure that they all pass.
 Make sure to clean up your Git history, prior your submission of a pull-request. You can do so by using the interactive rebase command for committing and squashing, simultaneously with minor changes + fixes into the corresponding commits.
 
-## About LambdaTest
+## About TestMu AI
 
-[LambdaTest](https://www.lambdatest.com/) is a cloud based selenium grid infrastructure that can help you run automated cross browser compatibility tests on 2000+ different browser and operating system environments. LambdaTest supports all programming languages and frameworks that are supported with Selenium, and have easy integrations with all popular CI/CD platforms. It's a perfect solution to bring your [selenium automation testing](https://www.lambdatest.com/selenium-automation) to cloud based infrastructure that not only helps you increase your test coverage over multiple desktop and mobile browsers, but also allows you to cut down your test execution time by running tests on parallel.
+[TestMu AI](https://www.testmuai.com/) (formerly LambdaTest) is a full-stack, agentic AI quality engineering platform that helps teams test smarter and ship faster. Built AI-native from the ground up, it provides end-to-end AI agents that can plan, author, execute, and analyze software testing across the entire development lifecycle.
+
+Designed for scale, TestMu AI enables seamless testing of web, mobile, and enterprise applications on real devices, real browsers, and customizable real-world environments—empowering teams to deliver high-quality releases with speed and confidence.
+
+It's a perfect solution to bring your [selenium automation testing](https://www.testmuai.com/selenium-automation/) to cloud based infrastructure that not only helps you increase your test coverage over multiple desktop and mobile browsers, but also allows you to cut down your test execution time by running tests on parallel.
