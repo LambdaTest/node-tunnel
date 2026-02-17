@@ -1,4 +1,4 @@
-![TestMu AI Logo](https://raw.githubusercontent.com/LambdaTest/node-tunnel/master/logo.svg)
+![TestMu AI Logo](https://assets.testmu.ai/resources/images/logos/logo.svg)
 
 # TestMu AI Nodejs bindings for Tunnel 
 
