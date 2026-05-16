@@ -1,218 +1,70 @@
-![TestMu AI Logo](https://assets.testmu.ai/resources/images/logos/logo.svg)
+# Node.js Tunnel for TestMu AI (Formerly LambdaTest)
 
-# TestMu AI Nodejs bindings for Tunnel 
+<p align="center">
+  <a href="https://www.testmuai.com/"><img src="https://img.shields.io/badge/MADE%20BY%20TestMu%20AI-000000.svg?style=for-the-badge&labelColor=000" alt="Made by TestMu AI"></a>
+  <a href="https://www.npmjs.com/package/@lambdatest/node-tunnel"><img src="https://img.shields.io/npm/v/@lambdatest/node-tunnel.svg?style=for-the-badge&labelColor=000000" alt="npm version"></a>
+  <a href="https://community.testmuai.com/"><img src="https://img.shields.io/badge/Join%20the%20community-blueviolet.svg?style=for-the-badge&labelColor=000000" alt="Community"></a>
+</p>
 
-[![Node Tunnel health check](https://github.com/LambdaTest/node-tunnel/actions/workflows/healthcheck.yml/badge.svg?branch=master)](https://github.com/LambdaTest/node-tunnel/actions/workflows/healthcheck.yml)
+## Getting Started
 
-## Installation
+[TestMu AI](https://www.testmuai.com/) (Formerly LambdaTest) is the world's first full-stack AI Agentic Quality Engineering platform that empowers teams to test intelligently, smarter, and ship faster. Built for scale, it offers a full-stack testing cloud with 10K+ real devices and 3,000+ browsers. With AI-native test management, MCP servers, and agent-based automation, TestMu AI supports Selenium, Appium, Playwright, and all major frameworks. 
 
+With TestMu AI (Formerly LambdaTest), you can programmatically start, manage, and stop a secure tunnel to your local or private network from Node.js applications — enabling local testing against the TestMu AI cloud without manual tunnel setup.
+
+- [Sign up on TestMu AI](https://www.testmuai.com/register/) (Formerly LambdaTest).
+- Follow the [TestMu AI Documentation](https://www.testmuai.com/support/docs/) for the full setup walkthrough.
+
+### Prerequisites
+
+- Node.js and npm (latest stable)
+- A TestMu AI (Formerly LambdaTest) account with your username and access key
+
+### Setup
+
+Clone and install dependencies:
+
+```bash
+git clone https://github.com/LambdaTest/node-tunnel && cd node-tunnel
+npm install @lambdatest/node-tunnel
 ```
-npm i @lambdatest/node-tunnel
+
+Set your credentials as environment variables.
+
+**macOS / Linux:**
+
+```bash
+export LT_USERNAME="YOUR_USERNAME"
+export LT_ACCESS_KEY="YOUR_ACCESS_KEY"
 ```
 
-## Example
+**Windows:**
+
+```bash
+set LT_USERNAME="YOUR_USERNAME"
+set LT_ACCESS_KEY="YOUR_ACCESS_KEY"
+```
+
+### Run tests
 
 ```js
 var lambdaTunnel = require('@lambdatest/node-tunnel');
 
-//Creates an instance of Tunnel
 var tunnelInstance = new lambdaTunnel();
 
-// Replace <lambdatest-user> with your user and <lambdatest-accesskey> with your key.
 var tunnelArguments = {
-  user: process.env.LT_USERNAME || '<lambdatest-user>',
-  key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>'
+  user: process.env.LT_USERNAME,
+  key: process.env.LT_ACCESS_KEY
 };
 
-// Callback Style
-// Atarts the Tunnel instance with the required arguments
-tunnelInstance.start(tunnelArguments, function(error, status) {
-  if (!error) {
-    console.log('Tunnel is Running Successfully');
-  }
-});
-
-// Promise Style
-tunnelInstance
-  .start(tunnelArguments)
-  .then(status => {
-    console.log('Tunnel is Running Successfully');
-  })
-  .catch(error => {
-    console.log(error);
-  });
-
 // Async/Await Style
 (async function() {
   try {
     const istunnelStarted = await tunnelInstance.start(tunnelArguments);
     console.log('Tunnel is Running Successfully');
-  } catch (error) {
-    console.log(error);
-  }
-})();
-```
 
-## Methods
+    // Run your tests here
 
-#### tunnelInstance.start(tunnelArguments, callback)
-
-Start tunnel Instance.
-
-- `tunnelArguments`: credentials for secure tunnel connection.
-  - `user`: The username for the TestMu AI account.
-  - `key`: The accessKey for the TestMu AI account.
-- `callback` (`function(error, status)`): A callback to invoke when the API call is
-  complete.
-
-```js
-// Callback Style
-tunnelInstance.start(tunnelArguments, function(error, status) {
-  if (!error) {
-    console.log('Tunnel is Running Successfully');
-  }
-});
-
-// Promise Style
-tunnelInstance
-  .start(tunnelArguments)
-  .then(status => {
-    console.log('Tunnel is Running Successfully');
-  })
-  .catch(error => {
-    console.log(error);
-  });
-
-// Async/Await Style
-(async function() {
-  try {
-    const istunnelStarted = await tunnelInstance.start(tunnelArguments);
-    console.log('Tunnel is Running Successfully');
-  } catch (error) {
-    console.log(error);
-  }
-})();
-```
-
-#### tunnelInstance.isRunning()
-
-Get Status of tunnel Instance.
-
-```js
-// Callback Style
-tunnelInstance.start(tunnelArguments, function(error, status) {
-  if (!error) {
-    console.log('Tunnel is Running Successfully');
-    var tunnelRunningStatus = tunnelInstance.isRunning();
-    console.log('Tunnel is Running ? ' + tunnelRunningStatus);
-  }
-});
-
-// Promise Style
-tunnelInstance
-  .start(tunnelArguments)
-  .then(status => {
-    console.log('Tunnel is Running Successfully');
-    const tunnelRunningStatus = tunnelInstance.isRunning();
-    console.log('Tunnel is Running ? ' + tunnelRunningStatus);
-  })
-  .catch(error => {
-    console.log(error);
-  });
-
-// Async/Await Style
-(async function() {
-  try {
-    const istunnelStarted = await tunnelInstance.start(tunnelArguments);
-    console.log('Tunnel is Running Successfully');
-    const tunnelRunningStatus = tunnelInstance.isRunning();
-    console.log('Tunnel is Running ? ' + tunnelRunningStatus);
-  } catch (error) {
-    console.log(error);
-  }
-})();
-```
-
-#### tunnelInstance.getTunnelName(callback)
-
-Get name of the Running tunnel Instance.
-
-- `callback` (`function(tunnelName)`): A callback to invoke when the API call is
-  complete.
-
-```js
-// Callback Style
-tunnelInstance.start(tunnelArguments, function(error, status) {
-  if (!error) {
-    console.log('Tunnel is Running Successfully');
-    tunnelInstance.getTunnelName(function(tunnelName) {
-      console.log('Tunnel Name : ' + tunnelName);
-    });
-  }
-});
-
-// Promise Style
-tunnelInstance
-  .start(tunnelArguments)
-  .then(status => {
-    console.log('Tunnel is Running Successfully');
-    tunnelInstance.getTunnelName().then(tunnelName => {
-      console.log('Tunnel Name : ' + tunnelName);
-    });
-  })
-  .catch(error => {
-    console.log(error);
-  });
-
-// Async/Await Style
-(async function() {
-  try {
-    const istunnelStarted = await tunnelInstance.start(tunnelArguments);
-    console.log('Tunnel is Running Successfully');
-    const tunnelName = await tunnelInstance.getTunnelName();
-    console.log('Tunnel Name : ' + tunnelName);
-  } catch (error) {
-    console.log(error);
-  }
-})();
-```
-
-#### tunnelInstance.stop(callback)
-
-Stop the Running tunnel Instance.
-
-- `callback` (`function(error, status)`): A callback to invoke when the API call is
-  complete.
-
-```js
-// Callback Style
-tunnelInstance.start(tunnelArguments, function(error, status) {
-  if (!error) {
-    console.log('Tunnel is Running Successfully');
-    tunnelInstance.stop(function(error, status) {
-      console.log('Tunnel is Stopped ? ' + status);
-    });
-  }
-});
-
-// Promise Style
-tunnelInstance
-  .start(tunnelArguments)
-  .then(status => {
-    console.log('Tunnel is Running Successfully');
-    tunnelInstance.stop().then(status => {
-      console.log('Tunnel is Stopped ? ' + status);
-    });
-  })
-  .catch(error => {
-    console.log(error);
-  });
-
-// Async/Await Style
-(async function() {
-  try {
-    const istunnelStarted = await tunnelInstance.start(tunnelArguments);
-    console.log('Tunnel is Running Successfully');
     const status = await tunnelInstance.stop();
     console.log('Tunnel is Stopped ? ' + status);
   } catch (error) {
@@ -221,140 +73,61 @@ tunnelInstance
 })();
 ```
 
-## Arguments
+View results on your TestMu AI dashboard.
 
-Every modifier except user and key is optional. Visit TestMu AI <a href="https://www.testmuai.com/support/docs/lambda-tunnel-modifiers/" target="_blank">tunnel modifiers</a> for an entire list of modifiers. Below are demonstration of some modifiers for your reference.
+### Local testing with TestMu AI Tunnel
 
-#### TestMu AI Basic Credentials
+To test locally hosted apps, set up the TestMu AI tunnel. OS-specific guides:
 
-Below credentials will be used to perform basic authentication of your TestMu AI account.
+- [Local Testing on Windows](https://www.testmuai.com/support/docs/local-testing-for-windows/)
+- [Local Testing on macOS](https://www.testmuai.com/support/docs/local-testing-for-macos/)
+- [Local Testing on Linux](https://www.testmuai.com/support/docs/local-testing-for-linux/)
 
-- user (Username of your TestMu AI account)
-- key (Access Key of your TestMu AI account)
-
-### Port
-
-If you wish to connect tunnel on a specific port.
-
-- port : (optional) Local port to connect tunnel.
+Add the following to your capabilities:
 
 ```js
-tunnelArguments = {
-  user: process.env.LT_USERNAME || '<lambdatest-user>',
-  key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>',
-  port: '<port>'
-};
+tunnel: true,
 ```
 
-#### Proxy
+## Contributions
 
-If you wish to perform tunnel testing using a proxy.
+Contributions are welcome. Open an issue to discuss your idea before submitting a pull request. When reporting bugs, include your Node.js version, OS, and npm version.
 
-- proxyhost: Hostname/IP of proxy, this is a mandatory value.
-- proxyport: Port for the proxy, by default it would consider 3128 if proxyhost is used For Basic Authentication, we use the below proxy options:
-- proxyuser: Username for connecting to proxy, mandatory value for using 'proxypass'
-- proxypass: Password for the USERNAME option.
+## TestMu AI (Formerly LambdaTest) Community
 
-```js
-tunnelArguments = {
-  user: process.env.LT_USERNAME || '<lambdatest-user>',
-  key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>',
-  proxyHost: '127.0.0.1',
-  proxyPort: '8000',
-  proxyUser: 'user',
-  proxyPass: 'password'
-};
-```
+Connect with testers and developers in the [TestMu AI Community](https://community.testmuai.com/). Ask questions, share what you are building, and discuss best practices in test automation and DevOps.
+  
+## TestMu AI (Formerly LambdaTest) Certifications
 
-#### Tunnel Name
+Earn free [TestMu AI Certifications](https://www.testmuai.com/certifications/) for testers, developers, and QA engineers. Validate your skills in Selenium, Cypress, Playwright, Appium, Espresso and more. Industry-recognized, shareable on LinkedIn, and built by practitioners, not marketers.
 
-Human readable tunnel identifier
+## Learning Resources by TestMu AI (Formerly LambdaTest)
 
-- tunnelName: (Name of the tunnel)
+Learn modern testing through tutorials, guides, videos, and weekly updates:
 
-```js
-tunnelArguments = {
-  user: process.env.LT_USERNAME || '<lambdatest-user>',
-  key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>',
-  tunnelName: '<your-tunnel-name>'
-};
-```
+* [TestMu AI Blog](https://www.testmuai.com/blog/)
+* [TestMu AI Learning Hub](https://www.testmuai.com/learning-hub/)
+* [TestMu AI on YouTube](https://www.youtube.com/@TestMuAI)
+* [TestMu AI Newsletter](https://www.testmuai.com/newsletter/)
+  
+## LambdaTest is Now TestMu AI
 
-#### Testing Local Folder
+On **January 12, 2026**, [LambdaTest evolved to TestMu AI](https://www.testmuai.com/lambdatest-is-now-testmuai/), the world's first fully autonomous **Agentic AI Quality Engineering Platform**.
 
-Populate the path of the local folder you want to test in your internal server as a value in the below modifier.
+Same team. Same infrastructure. Same customer accounts. All existing LambdaTest logins, scripts, capabilities, and integrations continue to work without change.
 
-- dir/localdir/localdirectory : Path of the local folder you want to test
+Find the new home for [LambdaTest](https://www.testmuai.com).
 
-```js
-tunnelArguments = {
-  user: process.env.LT_USERNAME || '<lambdatest-user>',
-  key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>',
-  dir: '<path of the local folder you want to test>'
-};
-```
+### How LambdaTest Evolved into TestMu AI
 
-#### Enable Verbose Logging
+In 2017, we launched LambdaTest with a simple mission: make testing fast, reliable, and accessible. As LambdaTest grew, we expanded into Test Intelligence, Visual Regression Testing, Accessibility Testing, API Testing, and Performance Testing, covering the full depth of the testing lifecycle.
 
-To log every request to stdout.
+As software development entered the AI era, testing had to evolve, too. We rebuilt the architecture to be AI-native from the ground up, with autonomous agents that **plan, author, execute, analyze, and optimize tests** while keeping humans in the loop. The platform integrates with your repos, CI, IDEs, and terminals, continuously learning from every code change and development signal.
 
-- v/verbose : true or false
+That evolution earned a new name: **TestMu AI**, built for an AI-first future of quality engineering. TestMu is not a new name for us. It is the name of our annual community conference, which has brought together 100,000+ quality engineers to discuss how AI would reshape testing, long before that became an industry norm. 
 
-```js
-tunnelArguments = {
-  user: process.env.LT_USERNAME || '<lambdatest-user>',
-  key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>',
-  v: true
-};
-```
+What started as a high-performance cloud testing platform has transformed into an AI-native, multi-agent system powering a connected, end-to-end quality layer. That evolution defined a new identity: LambdaTest evolved into TestMu AI, built for an AI-first future of quality engineering.
 
-#### Additional Arguments
+## Support
 
-Logfile
-You can provide a specific path to this file. If you won't provide a path then the logs would be saved in your present working directory by the filename: tunnel.log. For providing a specific path use the below argument:
-
-- logFile : path
-
-```js
-tunnelArguments = {
-  user: process.env.LT_USERNAME || '<lambdatest-user>',
-  key: process.env.LT_ACCESS_KEY || '<lambdatest-accesskey>',
-  logFile: '/lambdatest/logs.txt'
-};
-```
-- egressOnly:  Uses proxy settings only for outbound requests.
-- ingressOnly: Uses proxy settings only for inbound requests.
-- dns:         Comma separated list of dns servers
-- sshConnType: Specify type of ssh connection (over_22, over_443, over_ws)
-- mode:        Specifies in which mode tunnel should run [ssh,ws] 
-- nows:        Force tunnel to run in non websocket mode
-- mitm:        MITM mode, used for testing websites with private certificates
-
-## Contribute
-
-#### Reporting bugs
-
-Our GitHub Issue Tracker will help you log bug reports.
-
-Tips for submitting an issue:
-Keep in mind, you don't end up submitting two issues with the same information. Make sure you add a unique input in every issue that you submit. You could also provide a "+1" value in the comments.
-
-Always provide the steps to reproduce before you submit a bug.
-Provide the environment details where you received the issue i.e. Browser Name, Browser Version, Operating System, Screen Resolution and more.
-Describe the situation that led to your encounter with bug.
-Describe the expected output, and the actual output precisely.
-
-#### Pull Requests
-
-We don't want to pull breaks in case you want to customize your TestMu AI experience. Before you proceed with implementing pull requests, keep in mind the following.
-Make sure you stick to coding conventions.
-Once you include tests, ensure that they all pass.
-Make sure to clean up your Git history, prior your submission of a pull-request. You can do so by using the interactive rebase command for committing and squashing, simultaneously with minor changes + fixes into the corresponding commits.
-
-## About TestMu AI
-
-[TestMu AI](https://www.testmuai.com/) (formerly LambdaTest) is a full-stack, agentic AI quality engineering platform that helps teams test smarter and ship faster. Built AI-native from the ground up, it provides end-to-end AI agents that can plan, author, execute, and analyze software testing across the entire development lifecycle.
-
-Designed for scale, TestMu AI enables seamless testing of web, mobile, and enterprise applications on real devices, real browsers, and customizable real-world environments—empowering teams to deliver high-quality releases with speed and confidence.
-
-It's a perfect solution to bring your [selenium automation testing](https://www.testmuai.com/selenium-automation/) to cloud based infrastructure that not only helps you increase your test coverage over multiple desktop and mobile browsers, but also allows you to cut down your test execution time by running tests on parallel.
+Got a question? Email [support@testmuai.com](mailto:support@testmuai.com) or chat with us 24x7 from our chat portal.
