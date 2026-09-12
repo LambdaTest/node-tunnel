@@ -4,6 +4,8 @@
 
 [![Node Tunnel health check](https://github.com/LambdaTest/node-tunnel/actions/workflows/healthcheck.yml/badge.svg?branch=master)](https://github.com/LambdaTest/node-tunnel/actions/workflows/healthcheck.yml)
 
+📖 **Documentation:** [Browser Cloud Tunnel Guide](https://www.testmuai.com/support/docs/browser-cloud-tunnel/)
+
 ## Installation
 
 ```
