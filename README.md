@@ -77,7 +77,7 @@ View results on your TestMu AI dashboard.
 
 ### Local testing with TestMu AI Tunnel
 
-To test locally hosted apps, set up the TestMu AI tunnel. OS-specific guides:
+To test locally hosted apps, set up the TestMu AI tunnel. See the [Browser Cloud Tunnel documentation](https://www.testmuai.com/support/docs/browser-cloud-tunnel/) for the full reference, or jump to an OS-specific guide:
 
 - [Local Testing on Windows](https://www.testmuai.com/support/docs/local-testing-for-windows/)
 - [Local Testing on macOS](https://www.testmuai.com/support/docs/local-testing-for-macos/)
