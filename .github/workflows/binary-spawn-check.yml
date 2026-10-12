@@ -17,14 +17,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-      - name: Enable Defender real-time protection
-        if: runner.os == 'Windows'
-        shell: pwsh
-        continue-on-error: true
-        run: |
-          Remove-Item -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender' -Recurse -Force -ErrorAction SilentlyContinue
-          Set-MpPreference -DisableRealtimeMonitoring $false
-          Get-MpComputerStatus | Select-Object AntivirusEnabled, RealTimeProtectionEnabled, OnAccessProtectionEnabled
       - run: npm install --omit=dev --no-audit --no-fund
       - run: node scripts/check-binary-spawn.js 15
       - name: Spawn check with slow binary close (simulated AV scan-on-close)
