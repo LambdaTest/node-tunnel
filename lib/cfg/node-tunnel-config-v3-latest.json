@@ -63,20 +63,20 @@
                {
                    "httpPath": "https://downloads.lambdatest.com/tunnel/v3/freebsd/32bit/LT_Freebsd.zip",
                    "binaryName": "LT_Freebsd.zip",
-                   "hash": "3525242664a3a24aa9e49969d137dadb"
+                   "hash": "0747869934c7838e1e812d508c242d50"
                },
                "64bit":
                {
                    "httpPath": "https://downloads.lambdatest.com/tunnel/v3/freebsd/64bit/LT_Freebsd.zip",
                    "binaryName": "LT_Freebsd.zip",
-                   "hash": "e5fec50196cd1fa02306bdd74acccea3"
+                   "hash": "5a64de0bf4e821da8ddf26c830fc322a"
                }
            }
        }
    },
    "AuthUrl": "https://accounts.lambdatest.com/api/user/token/auth",
    "logEnable": true,
-   "latest": "4.0.12",
+   "latest": "4.0.14",
    "supportedVersions":
    [
        "1.0.0",
@@ -125,6 +125,8 @@
        "4.0.9",
        "4.0.10",
        "4.0.11",
-       "4.0.12"
+       "4.0.12",
+       "4.0.13",
+       "4.0.14"
    ]
 }
