@@ -1,0 +1,23 @@
+name: Binary extract and spawn check
+on:
+  push:
+  pull_request:
+
+jobs:
+  spawn:
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+        node: [18, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install --omit=dev --no-audit --no-fund
+      - run: node scripts/check-binary-spawn.js 15
+      - name: Spawn check with slow binary close (simulated AV scan-on-close)
+        run: node -r ./scripts/slow-close.js scripts/check-binary-spawn.js 5
