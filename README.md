@@ -22,10 +22,9 @@ With TestMu AI (Formerly LambdaTest), you can programmatically start, manage, an
 
 ### Setup
 
-Clone and install dependencies:
+Install the package in your project:
 
 ```bash
-git clone https://github.com/LambdaTest/node-tunnel && cd node-tunnel
 npm install @lambdatest/node-tunnel
 ```
 
@@ -77,7 +76,7 @@ View results on your TestMu AI dashboard.
 
 ### Local testing with TestMu AI Tunnel
 
-To test locally hosted apps, set up the TestMu AI tunnel. OS-specific guides:
+To test locally hosted apps, set up the TestMu AI tunnel. See the [Testing locally hosted pages](https://www.testmuai.com/support/docs/testing-locally-hosted-pages/?utm_source=github&utm_medium=referral) for the full reference, or jump to an OS-specific guide:
 
 - [Local Testing on Windows](https://www.testmuai.com/support/docs/local-testing-for-windows/)
 - [Local Testing on macOS](https://www.testmuai.com/support/docs/local-testing-for-macos/)
